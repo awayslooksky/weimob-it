@@ -1,21 +1,16 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
-}
+.page{display:flex;flex-direction:column;align-items:center;}
+.userinfo{display:flex;flex-direction:column;align-items:center;margin:50rpx 0 120rpx;}
+.userinfo-avatar{width:115rpx;height:115rpx;margin:20rpx;border-radius:50%;}
+.userinfo-nickname{color:#aaa;font-size: 30rpx;}
+.repairBtn{text-align:center;font-size:40rpx;width:85%;margin-bottom:30rpx;color:#fff;padding:35rpx 0;flex-direction:column;align-items:center;display:flex;position:relative;}
+.repairBtn image{width:140rpx;height:140rpx;border-radius:50%;}
+.repairBtn text{line-height:60rpx;margin-top:10rpx;color:#333;font-size:25rpx;}
+.repairBtn:before,.repairBtn:after{position:absolute;content:"";width:40rpx;height:40rpx;}
+.newRepair:before{top:0;left:0;border-left:1px solid #2196f3;
+	border-top:1px solid #2196f3;}
+.newRepair:after{top:0;right:0;border-right:1px solid #2196f3;
+	border-top:1px solid #2196f3;}
+.repairRecord:before{bottom:0;left:0;border-left:1px solid #7d889e;
+	border-bottom:1px solid #7d889e;}
+.repairRecord:after{bottom:0;right:0;border-right:1px solid #7d889e;
+	border-bottom:1px solid #7d889e;}

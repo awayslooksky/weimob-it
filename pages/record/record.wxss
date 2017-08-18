@@ -1,0 +1,27 @@
+
+.emptyData{
+    line-height: 600rpx;
+    color:#6e6033;
+    text-align: center;
+    background: url(./images/noData.jpg) no-repeat center bottom;
+    background-size: 247rpx auto;
+}
+.topNav{display:flex;flex-direction:row;align-items:center;width:90%;border:1px solid #2196F3;border-radius:3px;margin:5% auto 0;color:#2196F3;}
+.topNav view{width:50%;text-align:center;line-height:60rpx;font-size:30rpx;}
+.topNav view.cur{color:#fff;background:#2196F3;}
+.list{padding:20rpx 0 20rpx;position:relative;}
+.list:after{position:absolute;content:"";left:5%;bottom:0;width:90%;height:1px;background:#d7d7d7;}
+.item{display:flex;flex-direction:row;align-items:center;padding:0 5%;line-height:50rpx;color:#333;font-size:30rpx;}
+.item text{width:200rpx;}
+.backToIndex{
+    width:100rpx;
+    height:100rpx;
+    border-radius: 50%;
+    position: fixed;
+    right:40rpx;
+    bottom:300rpx;
+    text-align: center;
+    line-height:100rpx;
+    background: #2196F3;
+    color: #fff;
+}
