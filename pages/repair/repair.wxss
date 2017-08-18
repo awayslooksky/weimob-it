@@ -1,0 +1,9 @@
+.item{display:flex;flex-direction:row;line-height:100rpx;align-items:center;padding:0 40rpx;border-bottom:1px solid #d7d7d7;font-size:30rpx; color:#333;}
+.placeholderStyle{color:#999;}
+input,textarea,picker{width:80%;}
+.item text{width:200rpx;}
+.item textarea{line-height:30rpx;padding:15rpx 0;}
+.department{position:relative;}
+.department:after{position:absolute;right:10px;top:50%;height:10px;width:10px;margin-top:-5px;border-left:2px solid #999;border-bottom:2px solid #999;content:"";transform:rotate(-138deg);-webkit-transform:rotate(-138deg);}
+.toSubmit button{line-height:80rpx;color:#fff;width:90%;margin-top:30rpx;background:-webkit-linear-gradient(left,#2196F3,#1586e0);background:linear-gradient(left,#2196F3,#1586e0);}
+.checkRecord{text-align:center;color:#2196F3;font-size:25rpx;line-height:80rpx;}

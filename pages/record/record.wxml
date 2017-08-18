@@ -1,0 +1,37 @@
+<view class="page">
+
+	<view class="emptyData" wx:if="{{!hasData}}">报告萌主，您还木有记录。。。</view>
+	<view class="hasData" wx:else>
+		<view class="topNav">
+			<view class="{{curNav == 0 ? 'cur' : ''}}" data-cur="0" bindtap="swichNav">未完成</view>
+			<view class="{{curNav == 1 ? 'cur' : ''}}" data-cur="1" bindtap="swichNav">已完成</view>
+		</view>
+
+		<block wx:for="{{listData}}" wx:key="{{index}}">
+			<view class="list">
+				<view class="item">
+					<text>报修时间：</text>
+					<view>{{item.create_time}}</view>
+				</view>
+				<view class="item">
+					<text>报修姓名：</text>
+					<view>报修姓名</view>
+				</view>
+				<view class="item">
+					<text>报修部门：</text>
+					<view>{{item.department}}</view>
+				</view>
+				<view class="item">
+					<text>报修地址：</text>
+					<view>{{item.location}}</view>
+				</view>
+				<view class="item">
+					<text>报修信息：</text>
+					<view>{{item.detail}}</view>
+				</view>
+			</view>
+		</block>
+	</view>
+
+	<view class="backToIndex" bindtap="backToIndex">首页</view>
+</view>

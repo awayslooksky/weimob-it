@@ -1,0 +1,28 @@
+<view class="page">
+	<form bindsubmit="formSubmit">
+		<view class="item name">
+			<text>报修姓名：</text>
+			<input placeholder="请输入姓名" placeholder-class="placeholderStyle" name="name"/>
+		</view>
+		<view class="item department">
+			<text>报修部门：</text>
+			<picker range="{{deArr}}" bindchange="bindPickerChange" value="{{deCurIndex}}" 
+			name="picker">
+				{{deArr[deCurIndex]}}
+			</picker>
+		</view>
+		<view class="item adress">
+			<text>报修地址：</text>
+			<input placeholder="请输入地址" placeholder-class="placeholderStyle" name="adress"/>
+		</view>
+		<view class="item content">
+			<text>报修信息：</text>
+			<textarea placeholder="请输入信息" placeholder-class="placeholderStyle" name="textarea" auto-height>
+			</textarea>
+		</view>
+		<view class="toSubmit">
+			<button formType="submit">提交</button>
+		</view>
+	</form>
+	<view class="checkRecord" bindtap="checkRecord">查看我的报修记录</view>
+</view>
