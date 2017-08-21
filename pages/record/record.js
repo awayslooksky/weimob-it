@@ -18,7 +18,7 @@ Page({
 	getListData(status){
         let nickName = wx.getStorageSync("scopeInfos").nickName;
 		wx.request({
-			url:"http://172.19.37.50/IT/index.php/mobile/list",
+			url:"http://172.19.37.52/IT/index.php/mobile/list",
             data:{
 		 		wid:nickName,
 				status:status
