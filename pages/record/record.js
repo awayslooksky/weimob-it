@@ -47,7 +47,7 @@ Page({
 		})
 	},
     backToIndex() {
-        wx.redirectTo({
+        wx.reLaunch({
             url: "../index/index"
         })
     }
