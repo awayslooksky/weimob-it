@@ -1,7 +1,7 @@
 <view class="page">
 
-	<view class="emptyData" wx:if="{{!hasData}}">报告萌主，您还木有记录。。。</view>
-	<view class="hasData" wx:else>
+	<view class="emptyData" wx:if="{{hasData=='0'}}">报告萌主，您还木有记录。。。</view>
+	<view class="hasData" wx:elif="{{hasData=='1'}}">
 		<view class="topNav">
 			<view class="{{curNav == 0 ? 'cur' : ''}}" data-cur="0" bindtap="swichNav">未完成</view>
 			<view class="{{curNav == 1 ? 'cur' : ''}}" data-cur="1" bindtap="swichNav">已完成</view>

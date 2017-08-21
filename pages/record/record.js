@@ -1,8 +1,7 @@
 Page({
 	data:{
 		curNav:0,
-		listData:[],
-		hasData:false
+		listData:[]
 	},
 	onLoad(){
 		this.getListData(0);
@@ -17,6 +16,9 @@ Page({
 	},
 	getListData(status){
         let nickName = wx.getStorageSync("scopeInfos").nickName;
+        wx.showLoading({
+            title: "加载中",
+        })
 		wx.request({
 			url:"http://172.19.37.52/IT/index.php/mobile/list",
             data:{
@@ -27,17 +29,22 @@ Page({
 				if(!res.data.code){
 					if(res.data.data.length>0){
                         this.setData({
-                            hasData:true,
+                            hasData:"1",
                             listData:res.data.data
+                        })
+					}else{
+                        this.setData({
+                            hasData:"0"
                         })
 					}
 				}else{
                     wx.showToast({
                         title: "出错了哦",
-                        icon: "success",
+                        icon: "loading",
                         duration: 2000
                     })
 				}
+                wx.hideLoading();
 			}
 		})
 	},
