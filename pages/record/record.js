@@ -38,10 +38,8 @@ Page({
                         })
 					}
 				}else{
-                    wx.showToast({
-                        title: "出错了哦",
-                        icon: "loading",
-                        duration: 2000
+                    this.setData({
+                        hasData:"2"
                     })
 				}
                 wx.hideLoading();
