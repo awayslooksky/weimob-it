@@ -33,7 +33,7 @@ Page({
 			return;
 		};
 		wx.request({
-			url:"http://172.19.37.50/IT/index.php/mobile/submit",
+			url:"http://172.19.37.52/IT/index.php/mobile/submit",
 			method:"POST",
             header: {"content-type": "application/x-www-form-urlencoded"},
 			data:{
