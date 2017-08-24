@@ -17,15 +17,16 @@ Page({
 	getListData(status){
         let nickName = wx.getStorageSync("scopeInfos").nickName;
         wx.showLoading({
-            title: "加载中",
+            title: "加载中"
         })
 		wx.request({
-			url:"http://172.19.37.52/IT/index.php/mobile/list",
+			url:"https://repair.weimob.com/index.php/mobile/repairList",
             data:{
 		 		wid:nickName,
 				status:status
 			},
 			success:(res)=>{
+                wx.hideLoading();
 				if(!res.data.code){
 					if(res.data.data.length>0){
                         this.setData({
@@ -42,7 +43,6 @@ Page({
                         hasData:"2"
                     })
 				}
-                wx.hideLoading();
 			}
 		})
 	},
