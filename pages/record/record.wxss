@@ -3,7 +3,7 @@
     line-height: 600rpx;
     color:#6e6033;
     text-align: center;
-    background: url(./images/noData.jpg) no-repeat center bottom;
+    background: url(http://stc.dev.weimob.com/img/activity/wall/repair.jpg) no-repeat center bottom;
     background-size: 247rpx auto;
 }
 .topNav{display:flex;flex-direction:row;align-items:center;width:90%;border:1px solid #2196F3;border-radius:3px;margin:5% auto 0;color:#2196F3;}
