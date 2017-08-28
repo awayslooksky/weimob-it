@@ -79,25 +79,21 @@ Page({
                 if (res.confirm) {
                     wx.openSetting({
                         success: (res) => {
-                            wx.getSetting({
-                                success: (res) => {
-                                    if(res.authSetting["scope.userInfo"] != "undefined" && res.authSetting["scope.userInfo"]){
-                                        wx.getUserInfo({
-                                            success:(res) =>{
-                                                res.userInfo.isScope = true;
-                                                wx.setStorage({
-                                                    key:"scopeInfos",
-                                                    data:res.userInfo,
-                                                    success:()=>{
-                                                        typeof cb == "function" && cb();
-                                                    }
-                                                })
+                            if(res.authSetting["scope.userInfo"] != "undefined" && res.authSetting["scope.userInfo"]){
+                                wx.getUserInfo({
+                                    success:(res) =>{
+                                        res.userInfo.isScope = true;
+                                        wx.setStorage({
+                                            key:"scopeInfos",
+                                            data:res.userInfo,
+                                            success:()=>{
+                                                typeof cb == "function" && cb();
                                             }
                                         })
-
                                     }
-                                }
-                            })
+                                })
+
+                            }
                         }
                     })
                 }

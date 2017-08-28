@@ -20,7 +20,7 @@ Page({
 		let datas = e.detail.value;
         let nickName = wx.getStorageSync("scopeInfos").nickName;
 
-		if(datas.name=="" || datas.adress=="" || datas.content==""){
+		if(datas.name=="" || datas.adress=="" || datas.textarea==""){
             wx.showLoading({
                 title: "萌主调皮了哇~"
             })
@@ -37,7 +37,7 @@ Page({
 				name:datas.name,
 				location:datas.adress,
 				department:datas.department,
-				detail:datas.content,
+				detail:datas.textarea,
 				wid:nickName
 			},
 			success:(res)=>{
