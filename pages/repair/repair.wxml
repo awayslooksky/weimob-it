@@ -17,7 +17,7 @@
 		</view>
 		<view class="item content">
 			<text>报修信息：</text>
-			<textarea placeholder="请输入信息" placeholder-class="placeholderStyle" name="content" auto-height>
+			<textarea placeholder="请输入信息" placeholder-class="placeholderStyle" name="textarea" auto-height>
 			</textarea>
 		</view>
 		<view class="toSubmit">
