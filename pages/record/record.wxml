@@ -1,13 +1,13 @@
 <view class="page">
 
+	<view class="topNav" wx:if="{{hasData=='1'|| hasData=='0'}}">
+		<view class="{{curNav == 0 ? 'cur' : ''}}" data-cur="0" bindtap="swichNav">未完成</view>
+		<view class="{{curNav == 1 ? 'cur' : ''}}" data-cur="1" bindtap="swichNav">已完成</view>
+	</view>
+
 	<view class="emptyData" wx:if="{{hasData=='0'}}">报告萌主，您还木有记录。。。</view>
 	<view class="emptyData" wx:if="{{hasData=='2'}}">报告萌主，出错了。。。</view>
 	<view class="hasData" wx:elif="{{hasData=='1'}}">
-		<view class="topNav">
-			<view class="{{curNav == 0 ? 'cur' : ''}}" data-cur="0" bindtap="swichNav">未完成</view>
-			<view class="{{curNav == 1 ? 'cur' : ''}}" data-cur="1" bindtap="swichNav">已完成</view>
-		</view>
-
 		<block wx:for="{{listData}}" wx:key="{{index}}">
 			<view class="list">
 				<view class="item">
